@@ -99,7 +99,30 @@ body {
   h1 {
     margin-bottom: 10px;
   }
+  .GameTitle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
 
+      img {
+        width: 310px; /* уменьшенная ширина изображения */
+        height: 410px; /* при необходимости скорректируйте высоту */
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
+        margin: 0;
+      }
+
+    .info {
+      h2 {
+        margin: 0 0 10px 0;
+      }
+      p {
+        margin: 4px 0;
+      }
+    }
+  }
   .screenshots {
     display: grid;
     gap: 14px;

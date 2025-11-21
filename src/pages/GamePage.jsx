@@ -26,8 +26,17 @@ export default function GamePage() {
 
   return (
     <div className="game-page">
-      <h1>{game.name}</h1>
-      <p>{game.description_raw}</p>
+        <div className="GameTitle">
+            <div className="GameImage">
+               <img src={game.background_image} alt={game.name} />
+            </div>
+
+            <div className="GameInfo">
+              <h1>{game.name}</h1>
+              <p>{game.description_raw}</p>
+            </div>
+        </div>
+
 
       <h2>Скриншоты</h2>
       <div className="screenshots">
