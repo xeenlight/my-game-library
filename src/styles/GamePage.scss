@@ -1,0 +1,55 @@
+.game-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  p {
+    margin: 0;
+    text-align: justify;
+    text-justify: inter-word;
+    text-indent: 0;
+    max-width: 560px;
+  }
+  h2 {
+    font-size: 34px;
+    text-align: center;
+    margin: 0;
+  }
+  .GameTitle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+
+      img {
+        width: 310px;
+        height: 410px; 
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
+        margin: 0;
+      }
+
+    }
+  }
+  .screenshots {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+    }
+  }
+
+  .videos {
+    margin-top: 20px;
+
+    video {
+        width: 100% ;
+      margin-bottom: 20px;
+      border-radius: 12px;
+    }
+  }
+

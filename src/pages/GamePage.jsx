@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getGame, getScreenshots, getVideos } from "../api/rawg";
+import "../styles/GamePage.scss";
 
 export default function GamePage() {
   const { id } = useParams();
@@ -32,20 +33,20 @@ export default function GamePage() {
             </div>
 
             <div className="GameInfo">
-              <h1>{game.name}</h1>
+              <h2>{game.name}</h2>
               <p>{game.description_raw}</p>
             </div>
         </div>
 
 
-      <h2>Скриншоты</h2>
+      <h3>Скриншоты</h3>
       <div className="screenshots">
         {screens.map((s) => (
           <img key={s.id} src={s.image} alt="" />
         ))}
       </div>
 
-      <h2>Видео</h2>
+      <h3>Видео</h3>
       <div className="videos">
         {videos.map((v) => (
           <video key={v.id} controls width="600">

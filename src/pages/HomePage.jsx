@@ -2,6 +2,7 @@ import { useState } from "react";
 import SearchBar from "../components/SearchBar";
 import GameList from "../components/GameList";
 import { searchGames } from "../api/rawg";
+import "../styles/HomePage.scss";
 
 export default function HomePage() {
   const [games, setGames] = useState([]);
@@ -12,7 +13,7 @@ export default function HomePage() {
   };
 
   return (
-    <div>
+    <div className="HomePage">
       <SearchBar onSearch={handleSearch} />
       <GameList games={games} />
     </div>
