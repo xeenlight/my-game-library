@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getGame, getScreenshots, getVideos } from "../api/rawg";
 import Loader from "../components/loader";
 import "../styles/GamePage.scss";
+import SearchBar from "../components/SearchBar";
 
 export default function GamePage() {
   const { id } = useParams();
@@ -28,6 +29,7 @@ export default function GamePage() {
 
   return (
     <div className="game-page">
+        <SearchBar />
         <div className="GameTitle">
             <div className="GameImage">
                <img src={game.background_image} alt={game.name} />
