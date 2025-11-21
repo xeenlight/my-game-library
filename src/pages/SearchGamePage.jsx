@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { searchGames } from "../api/rawg";
 import GameList from "../components/GameList";
+import "../styles/SearchGamePage.scss";
+import SearchBar from "../components/SearchBar";
 
 export default function SearchGame() {
   const [params] = useSearchParams();
@@ -18,7 +20,8 @@ export default function SearchGame() {
   }, [query]);
 
   return (
-    <div>
+    <div className="SearchGamePage">
+        <SearchBar />
       <h2>Результаты поиска: {query}</h2>
       <GameList games={games} />
     </div>
