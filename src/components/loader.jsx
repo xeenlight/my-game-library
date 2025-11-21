@@ -4,8 +4,8 @@ import '../styles/Loader.scss';
 const Loader = () => {
   return (
     <div className="loader">
-<div class="spinner">
-    <div class="spinner1"></div>
+<div className="spinner">
+    <div className="spinner1"></div>
 </div>
     </div>
 
