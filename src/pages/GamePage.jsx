@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getGame, getScreenshots, getVideos } from "../api/rawg";
+import Loader from "../components/loader";
 import "../styles/GamePage.scss";
 
 export default function GamePage() {
@@ -23,7 +24,7 @@ export default function GamePage() {
     load();
   }, [id]);
 
-  if (!game) return <p>Загрузка...</p>;
+  if (!game) return <Loader/>;
 
   return (
     <div className="game-page">
