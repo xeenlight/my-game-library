@@ -1,15 +1,17 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
 import GameList from "../components/GameList";
-import { searchGames } from "../api/rawg";
+// ...existing code...
 import "../styles/HomePage.scss";
 
 export default function HomePage() {
   const [games, setGames] = useState([]);
+  const navigate = useNavigate();
 
-  const handleSearch = async (query) => {
-    const data = await searchGames(query);
-    setGames(data.results);
+  const handleSearch = (query) => {
+    // перенаправляем на страницу результатов поиска
+    navigate(`/search?query=${encodeURIComponent(query)}`);
   };
 
   return (
