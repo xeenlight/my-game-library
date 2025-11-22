@@ -20,3 +20,19 @@ export async function getVideos(id) {
   const res = await fetch(`${BASE_URL}/games/${id}/movies?key=${API_KEY}`);
   return await res.json();
 }
+
+
+export async function getPopularGames() {
+  const res = await fetch(`${BASE_URL}/games?key=${API_KEY}&ordering=-added&page_size=10`);
+  return res.json();
+}
+
+export async function getTopRatedGames() {
+  const res = await fetch(`${BASE_URL}/games?key=${API_KEY}&ordering=-rating&page_size=10`);
+  return res.json();
+}
+
+export async function getUpcomingGames() {
+  const res = await fetch(`${BASE_URL}/games?key=${API_KEY}&dates=2025-01-01,2026-12-31&ordering=-added&page_size=10`);
+  return res.json();
+}
