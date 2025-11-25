@@ -1,11 +1,30 @@
 $bg-card: #1b1b1d;
 $bg-card-hover: #232327;
 $text-color: #fff;
-$radius: 12px;
+.rating {
+  display: inline-block;
+  background: #222;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: gold;
+  margin-top: 5px;
+}
 
+
+
+
+.game-card a {
+  text-decoration: none; /* убирает подчёркивание */
+  color: inherit;        /* оставляет цвет как у текста */
+}
+
+.game-card a:hover h3 {
+  text-decoration: none; /* даже при наведении не подчёркивает */
+}
 
 .HomePage {
-  max-width: 900px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 30px;
   // ====== СЕТКА ======
@@ -17,11 +36,8 @@ $radius: 12px;
 
 // ====== КАРТОЧКА ИГРЫ ======
 .game-card {
-  background: $bg-card;
   padding: 12px;
-  border-radius: $radius;
   transition: 0.2s all ease;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
   &:hover {
     background: $bg-card-hover;
@@ -30,16 +46,15 @@ $radius: 12px;
 
   img {
     width: 100%;
-    height: 160px;
+    height: 350px;
     object-fit: cover;
-    border-radius: $radius;
-  }
 
+    
+  }
   h3 {
+    margin: 10px 0 5px 0;
     font-size: 18px;
-    margin-top: 10px;
   }
-
   p {
     opacity: 0.7;
   }

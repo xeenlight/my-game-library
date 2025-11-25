@@ -8,6 +8,7 @@ export default function GameList({ games }) {
           <Link to={`/game/${game.id}`}>
             <img src={game.background_image} alt={game.name} />
             <h3>{game.name}</h3>
+             <p className="rating">⭐ {game.rating}</p>
           </Link>
         </div>
       ))}
